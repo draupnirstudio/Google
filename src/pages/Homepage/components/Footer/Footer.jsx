@@ -10,7 +10,6 @@ import {
   FooterListItem, FooterListItemLink, FooterListLeftWrapper, FooterListRightWrapper, FooterWrapper,
 } from './footer.styled-components';
 
-
 const settingsLinkClickHandler = (handler, e) => {
   e.preventDefault();
   typeof handler === 'function' && handler();
