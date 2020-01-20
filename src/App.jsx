@@ -1,7 +1,7 @@
 import React from 'react';
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import Homepage from "./pages/Homepage/Homepage";
+import Homepage from './pages/Homepage/Homepage';
 
 const AppWrapper = styled.div`
   height: 100vh;
@@ -11,7 +11,7 @@ const AppWrapper = styled.div`
 function App() {
   return (
     <AppWrapper>
-      <Homepage/>
+      <Homepage />
     </AppWrapper>
   );
 }

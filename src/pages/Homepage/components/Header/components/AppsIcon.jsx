@@ -1,5 +1,5 @@
 import sprite from '@img/sprite.png';
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export default styled.div`
   height: 30px;

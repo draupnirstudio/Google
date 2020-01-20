@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import {HOMEPAGE_LINKS} from "@constant/homepage_links";
+import React from 'react';
+import styled from 'styled-components';
+import { HOMEPAGE_LINKS } from '@constant/homepage_links';
 
 const SignInButtonWrapper = styled.div`
   border: 1px solid #4285f4;
@@ -27,7 +27,9 @@ const signInButtonClickHandler = () => {
 
 function SignInButton() {
   return (
-    <SignInButtonWrapper onClick={signInButtonClickHandler}>{HOMEPAGE_LINKS.SIGN_IN.name}</SignInButtonWrapper>
+    <SignInButtonWrapper onClick={signInButtonClickHandler}>
+      {HOMEPAGE_LINKS.SIGN_IN.name}
+    </SignInButtonWrapper>
   );
 }
 

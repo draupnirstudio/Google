@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-const footerLinkColor = "#5f6368";
+const footerLinkColor = '#5f6368';
 
 export const FooterWrapper = styled.div`
   display: flex;

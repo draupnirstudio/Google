@@ -1,0 +1,28 @@
+{
+  "extends": [
+    "airbnb",
+    "airbnb/hooks"
+  ],
+  "globals": {
+    "window": true,
+    "document": true
+  },
+  "rules": {
+    "react/jsx-props-no-spreading": 0,
+    "no-unused-expressions": 0
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": [
+        [
+          "@constant",
+          "./src/constants"
+        ],
+        [
+          "@img",
+          "./src/assets/img"
+        ]
+      ]
+    }
+  }
+}

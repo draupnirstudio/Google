@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-import Header from "./components/Header/Header";
-import Main from "./components/Main/Main";
-import Footer from "./components/Footer/Footer";
+import Header from './components/Header/Header';
+import Main from './components/Main/Main';
+import Footer from './components/Footer/Footer';
 
 const HomepageWrapper = styled.div`
   display: flex;
@@ -26,12 +26,11 @@ const headerAppsIconClickHandler = () => {
 function Homepage() {
   return (
     <HomepageWrapper>
-      <Header onAppsIconClick={headerAppsIconClickHandler}/>
-      <Main/>
-      <Footer onSettingsLinkClick={footerSettingsLinkClickHandler}/>
+      <Header onAppsIconClick={headerAppsIconClickHandler} />
+      <Main />
+      <Footer onSettingsLinkClick={footerSettingsLinkClickHandler} />
     </HomepageWrapper>
   );
 }
 
 export default Homepage;
-
