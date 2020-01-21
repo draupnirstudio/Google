@@ -9,7 +9,9 @@
   },
   "rules": {
     "react/jsx-props-no-spreading": 0,
-    "no-unused-expressions": 0
+    "no-unused-expressions": 0,
+    "jsx-a11y/mouse-events-have-key-events": 0,
+    "react/no-unused-state": 0
   },
   "settings": {
     "import/resolver": {
@@ -21,6 +23,10 @@
         [
           "@img",
           "./src/assets/img"
+        ],
+        [
+          "@lib",
+          "./src/libs"
         ]
       ]
     }

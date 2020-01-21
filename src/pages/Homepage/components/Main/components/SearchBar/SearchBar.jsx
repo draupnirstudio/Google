@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
+
 import SearchIcon from './SearchIcon';
 import Microphone from './Microphone';
 
@@ -14,6 +15,7 @@ const SearchBarWrapper = styled.div`
   height: 46px;
   margin-top: 27px;
   padding: 0 14px;
+  user-select: none;
   
   &:hover, &.focus {
     box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
@@ -39,8 +41,8 @@ const SearchBarInput = styled.input`
 
 
 const SearchBar = () => {
-  const wrapper = React.createRef();
-  const input = React.createRef();
+  const wrapper = useRef();
+  const input = useRef();
 
   const [hasInputFocused, setHasInputFocused] = useState(true);
 
@@ -66,6 +68,5 @@ const SearchBar = () => {
     </SearchBarWrapper>
   );
 };
-
 
 export default SearchBar;

@@ -1,22 +1,25 @@
 import React from 'react';
-import { MainWrapper, SearchButton, SearchButtonWrapper } from './main.styled-components';
+
+import { MainWrapper } from './main.styled-components';
 import Logo from './components/Logo';
 import SearchBar from './components/SearchBar';
+import SearchButtons from './components/SearchButtons';
 
+class Main extends React.Component {
+  componentDidMount() {
 
-function Main() {
-  return (
-    <MainWrapper>
-      <Logo />
-      <SearchBar />
+  }
 
-      <SearchButtonWrapper>
-        <SearchButton>Google Search</SearchButton>
-        &nbsp;
-        <SearchButton>I&apos;m Feeling Lucky</SearchButton>
-      </SearchButtonWrapper>
-    </MainWrapper>
-  );
+  render() {
+    return (
+      <MainWrapper>
+        <Logo />
+        <SearchBar />
+
+        <SearchButtons />
+      </MainWrapper>
+    );
+  }
 }
 
 export default Main;
