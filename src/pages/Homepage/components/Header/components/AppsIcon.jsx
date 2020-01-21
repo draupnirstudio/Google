@@ -5,6 +5,7 @@ export default styled.div`
   height: 30px;
   width: 30px;
   background: url(${sprite}) -132px -38px;
+  background-size: 528px 68px;
   opacity: .55;
   cursor: pointer;
   

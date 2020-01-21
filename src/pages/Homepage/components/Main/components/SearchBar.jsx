@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import SearchIcon from './SearchIcon';
+import Microphone from './Microphone';
 
 const SearchBarWrapper = styled.div`
   display: flex;
@@ -14,17 +15,57 @@ const SearchBarWrapper = styled.div`
   margin-top: 27px;
   padding: 0 14px;
   
-  &:hover {
+  &:hover, &.focus {
     box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
     border-color: rgba(223, 225, 229, 0);
   }
 `;
 
+const SearchBarInput = styled.input`
+    background-color: transparent;
+    border: none;
+    margin: 0 0 0 13px;
+    padding: 0;
+    color: rgba(0,0,0,.87);
+    word-wrap: break-word;
+    outline: none;
+    display: flex;
+    flex: 100%;
+    -webkit-tap-highlight-color: transparent;
+    height: 34px;
+    font-size: 16px;
+    line-height: 34px;
+`;
 
-const SearchBar = () => (
-  <SearchBarWrapper>
-    <SearchIcon />
-  </SearchBarWrapper>
-);
+
+const SearchBar = () => {
+  const wrapper = React.createRef();
+  const input = React.createRef();
+
+  const [hasInputFocused, setHasInputFocused] = useState(true);
+
+  useEffect(() => {
+    wrapper.current.focus();
+    input.current.focus();
+    // eslint-disable-next-line
+  }, []);
+
+  const handleInputFocus = () => {
+    setHasInputFocused(true);
+  };
+
+  const handleInputBlur = () => {
+    setHasInputFocused(false);
+  };
+
+  return (
+    <SearchBarWrapper ref={wrapper} className={hasInputFocused ? 'focus' : ''}>
+      <SearchIcon />
+      <SearchBarInput type="text" ref={input} onFocus={handleInputFocus} onBlur={handleInputBlur} />
+      <Microphone />
+    </SearchBarWrapper>
+  );
+};
+
 
 export default SearchBar;

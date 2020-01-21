@@ -21,6 +21,9 @@ export const HeaderWrapper = styled.div`
 `;
 
 export const HeaderLink = styled.a`
+  display: inline-block;
+  height: 24px;
+  line-height: 24px;
   color: rgba(0, 0, 0, 0.87);
   text-decoration: none;
   

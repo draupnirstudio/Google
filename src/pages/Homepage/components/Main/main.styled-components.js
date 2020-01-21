@@ -6,7 +6,7 @@ export const MainWrapper = styled.div`
    align-self: center;
    position: relative;
    width:  584px;
-   top: -97px;
+   top: -81px;
 `;
 
 export const SearchButtonWrapper = styled.div`
