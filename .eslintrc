@@ -3,6 +3,7 @@
     "airbnb",
     "airbnb/hooks"
   ],
+  "parser": "babel-eslint",
   "globals": {
     "window": true,
     "document": true
@@ -11,7 +12,12 @@
     "react/jsx-props-no-spreading": 0,
     "no-unused-expressions": 0,
     "jsx-a11y/mouse-events-have-key-events": 0,
-    "react/no-unused-state": 0
+    "react/no-unused-state": 0,
+    "no-underscore-dangle": 0,
+    "react/jsx-no-bind": 0,
+    "react/forbid-prop-types": 0,
+    "no-bitwise": 0,
+    "react-hooks/exhaustive-deps": 0
   },
   "settings": {
     "import/resolver": {
@@ -21,12 +27,20 @@
           "./src/constants"
         ],
         [
+          "@ctx",
+          "./src/contexts"
+        ],
+        [
           "@img",
           "./src/assets/img"
         ],
         [
           "@lib",
           "./src/libs"
+        ],
+        [
+          "@util",
+          "./src/utils"
         ]
       ]
     }

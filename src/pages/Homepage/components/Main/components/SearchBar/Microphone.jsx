@@ -8,12 +8,13 @@ import GNEmitter from '@lib/GNEmitter/';
 const MicrophoneWrapper = styled.div`
   margin: 0 2px 0 8px;
   cursor: pointer;
+  width: 24px;
+  height: 24px;
 `;
 
 const MicrophoneImg = styled.img`
   width: 24px;
   height: 24px;
-  
 `;
 
 const microphoneIconMouseOverHandler = () => {
